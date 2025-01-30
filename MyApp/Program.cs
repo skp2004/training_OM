@@ -106,211 +106,229 @@
 //  that allows a class to inherit properties and methods from another class
 // eusability and establishes a relationship between classes.
 using System;
-
-class Program
+namespace MyApp
 {
-    static void Main(string[] args)
+    class Program
     {
-        PerformOprators();
-        PerformMathOperations();
-        PerformStringOperations();
-        PerformAllLoops();
-        Animal myAnimal = new Dog("sheru");
-        Animal myDog = new Dog("tommy");
-        Animal myCat = new Cat("Billo");
-        myAnimal.Speak();
-        myDog.Speak();
-        myCat.Speak();
-
-        myDog.SetName("Golu");
-        Console.WriteLine($"The dog name is: {myDog.GetName()}");
-    }
-    static void PerformOprators()
-    {
-        int a = 10, b = 5;
-
-        // Arithmetic Operators
-        Console.WriteLine($"Addition: {a + b}");
-        Console.WriteLine($"Subtraction: {a - b}");
-        Console.WriteLine($"Multiplication: {a * b}");
-        Console.WriteLine($"Division: {a / b}");
-        Console.WriteLine($"Modulus: {a % b}");
-
-        // Assignment Operators
-        a += 5;  // a = a + 5
-        Console.WriteLine($"After +=: {a}");
-        a *= 2;  // a = a * 2
-        Console.WriteLine($"After *=: {a}");
-
-        // Comparison Operators
-        Console.WriteLine($"Equal: {a == b}");
-        Console.WriteLine($"Not Equal: {a != b}");
-        Console.WriteLine($"Greater than: {a > b}");
-        Console.WriteLine($"Less than: {a < b}");
-
-        // Logical Operators
-        bool condition1 = (a > b);
-        bool condition2 = (b < 2);
-        Console.WriteLine($"AND: {condition1 && condition2}");
-        Console.WriteLine($"OR: {condition1 || condition2}");
-
-        // Bitwise Operators
-        Console.WriteLine($"Bitwise AND: {a & b}");
-        Console.WriteLine($"Bitwise OR: {a | b}");
-        Console.WriteLine($"Bitwise XOR: {a ^ b}");
-        Console.WriteLine($"Bitwise Left Shift: {a << 1}");
-        Console.WriteLine($"Bitwise Right Shift: {a >> 1}");
-
-        // Unary Operators
-        int c = 10;
-        Console.WriteLine($"Increment: {++c}");
-        Console.WriteLine($"Decrement: {--c}");
-
-
-        // Type Check Operators
-        object obj = "Hello";
-        Console.WriteLine($"Is obj a string? {obj is string}");
-
-
-        // max value 
-        int max = int.MaxValue;
-        // min value
-        int min = int.MinValue;
-        Console.WriteLine($"The range of integers is {min} to {max}");
-    }
-    static void PerformMathOperations()
-    {
-        double num1 = 25, num2 = 4, num4 = 10.75;
-
-        // Power and Root
-        Console.WriteLine($"Square Root: {Math.Sqrt(num1)}");
-        Console.WriteLine($"Power: {Math.Pow(num1, num2)}");
-
-        // Rounding Functions
-        Console.WriteLine($"Ceiling: {Math.Ceiling(num4)}");
-        Console.WriteLine($"Floor: {Math.Floor(num4)}");
-        Console.WriteLine($"Round: {Math.Round(num4)}");
-
-        // Min, Max
-        Console.WriteLine($"Min: {Math.Min(num1, num2)}");
-        Console.WriteLine($"Max: {Math.Max(num1, num2)}");
-
-        // Random Number
-        Random rand = new Random();
-        Console.WriteLine($"Random Number (1-100): {rand.Next(1, 101)}");
-    }
-
-    static void PerformStringOperations()
-    {
-        string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        Console.WriteLine($"The length of the txt string is: {txt.Length}");
-        string firstName = "John";
-        string lastName = "Doe";
-        // Uppercase and Lowercase
-        Console.WriteLine($"Uppercase: {firstName.ToUpper()}");
-        Console.WriteLine($"Lowercase: {lastName.ToLower()}");
-
-        // String Concatenation
-        string fullName = firstName + lastName;
-        Console.WriteLine($"Concatenation (+ operator): {fullName}");
-
-        string fullName2 = string.Concat(firstName, lastName);
-        Console.WriteLine($"Concatenation (Concat method): {fullName2}");
-
-        // String Interpolation
-        string interpolatedName = $"My full name is: {firstName.Trim()} {lastName.Trim()}";
-        Console.WriteLine(interpolatedName);
-
-        // Finding Index and Substring
-        string name = "John Doe";
-        int charPos = name.IndexOf("D");
-        string extractedLastName = name.Substring(charPos);
-        Console.WriteLine($"Extracted Last Name: {extractedLastName}");
-    }
-
-    static void PerformAllLoops()
-    {
-        int a = 5;
-        int b = 3;
-        if (a + b > 10)
-            Console.WriteLine("The answer is greater than 10");
-        else
-            Console.WriteLine("The answer is not greater than 10");
-
-        Console.WriteLine("For Loop:");
-        for (int i = 1; i <= 3; i++)
+        static void Main(string[] args)
         {
-            Console.WriteLine($"Jai swaminarayan {i}");
+            PerformOprators();
+            PerformMathOperations();
+            PerformStringOperations();
+            PerformAllLoops();
+
+            Animal myAnimal = new Dog("sheru");
+            Animal myDog = new Dog("tommy");
+            Animal myCat = new Cat("Billo");
+            myAnimal.Speak();
+            myDog.Speak();
+            myCat.Speak();
+
+            myDog.SetName("Golu");
+            Console.WriteLine($"The dog name is: {myDog.GetName()}");
+            Method method = new();
+            List.ShowListOperations();
+            method.PredefinedMethods();
+            method.UserDefined();
+            method.methodWithParameter("shashwat");
+            method.methodwithReturn(5, 6);
+            method.PrintValue(5);
+            method.PrintValue(5.6);
+            method.PrintValue("Jai Swaminarayan");
+            Method.Static();
+            method.InstanceMethod(5, 4);
+            method.Factorial(5);
+            method.AsyncExample();
+            method.CallExtensionMethod();
+
+            Linq.LINQ();
+        }
+        static void PerformOprators()
+        {
+            int a = 10, b = 5;
+
+            // Arithmetic Operators
+            Console.WriteLine($"Addition: {a + b}");
+            Console.WriteLine($"Subtraction: {a - b}");
+            Console.WriteLine($"Multiplication: {a * b}");
+            Console.WriteLine($"Division: {a / b}");
+            Console.WriteLine($"Modulus: {a % b}");
+
+            // Assignment Operators
+            a += 5;  // a = a + 5
+            Console.WriteLine($"After +=: {a}");
+            a *= 2;  // a = a * 2
+            Console.WriteLine($"After *=: {a}");
+
+            // Comparison Operators
+            Console.WriteLine($"Equal: {a == b}");
+            Console.WriteLine($"Not Equal: {a != b}");
+            Console.WriteLine($"Greater than: {a > b}");
+            Console.WriteLine($"Less than: {a < b}");
+
+            // Logical Operators
+            bool condition1 = (a > b);
+            bool condition2 = (b < 2);
+            Console.WriteLine($"AND: {condition1 && condition2}");
+            Console.WriteLine($"OR: {condition1 || condition2}");
+
+            // Bitwise Operators
+            Console.WriteLine($"Bitwise AND: {a & b}");
+            Console.WriteLine($"Bitwise OR: {a | b}");
+            Console.WriteLine($"Bitwise XOR: {a ^ b}");
+            Console.WriteLine($"Bitwise Left Shift: {a << 1}");
+            Console.WriteLine($"Bitwise Right Shift: {a >> 1}");
+
+            // Unary Operators
+            int c = 10;
+            Console.WriteLine($"Increment: {++c}");
+            Console.WriteLine($"Decrement: {--c}");
+
+
+            // Type Check Operators
+            object obj = "Hello";
+            Console.WriteLine($"Is obj a string? {obj is string}");
+
+
+            // max value 
+            int max = int.MaxValue;
+            // min value
+            int min = int.MinValue;
+            Console.WriteLine($"The range of integers is {min} to {max}");
+        }
+        static void PerformMathOperations()
+        {
+            double num1 = 25, num2 = 4, num4 = 10.75;
+
+            // Power and Root
+            Console.WriteLine($"Square Root: {Math.Sqrt(num1)}");
+            Console.WriteLine($"Power: {Math.Pow(num1, num2)}");
+
+            // Rounding Functions
+            Console.WriteLine($"Ceiling: {Math.Ceiling(num4)}");
+            Console.WriteLine($"Floor: {Math.Floor(num4)}");
+            Console.WriteLine($"Round: {Math.Round(num4)}");
+
+            // Min, Max
+            Console.WriteLine($"Min: {Math.Min(num1, num2)}");
+            Console.WriteLine($"Max: {Math.Max(num1, num2)}");
+
+            // Random Number
+            Random rand = new Random();
+            Console.WriteLine($"Random Number (1-100): {rand.Next(1, 101)}");
         }
 
-        Console.WriteLine("\nWhile Loop:");
-        int j = 1;
-        while (j <= 3)
+        static void PerformStringOperations()
         {
-            Console.WriteLine($"Jai swaminarayan {j}");
-            j++;
+            string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            Console.WriteLine($"The length of the txt string is: {txt.Length}");
+            string firstName = "John";
+            string lastName = "Doe";
+            // Uppercase and Lowercase
+            Console.WriteLine($"Uppercase: {firstName.ToUpper()}");
+            Console.WriteLine($"Lowercase: {lastName.ToLower()}");
+
+            // String Concatenation
+            string fullName = firstName + lastName;
+            Console.WriteLine($"Concatenation (+ operator): {fullName}");
+
+            string fullName2 = string.Concat(firstName, lastName);
+            Console.WriteLine($"Concatenation (Concat method): {fullName2}");
+
+            // String Interpolation
+            string interpolatedName = $"My full name is: {firstName.Trim()} {lastName.Trim()}";
+            Console.WriteLine(interpolatedName);
+
+            // Finding Index and Substring
+            string name = "John Doe";
+            int charPos = name.IndexOf("D");
+            string extractedLastName = name.Substring(charPos);
+            Console.WriteLine($"Extracted Last Name: {extractedLastName}");
         }
 
-        Console.WriteLine("\nDo-While Loop:");
-        int k = 1;
-        do
+        static void PerformAllLoops()
         {
-            Console.WriteLine($"Jai swaminarayan {k}");
-            k++;
-        } while (k <= 3);
+            int a = 5;
+            int b = 3;
+            if (a + b > 10)
+                Console.WriteLine("The answer is greater than 10");
+            else
+                Console.WriteLine("The answer is not greater than 10");
 
-        Console.WriteLine("\nForeach Loop:");
-        string[] colors = { "R", "G", "B" };
-        foreach (string color in colors)
-        {
-            Console.WriteLine($"Color: {color}");
+            Console.WriteLine("For Loop:");
+            for (int i = 1; i <= 3; i++)
+            {
+                Console.WriteLine($"Jai swaminarayan {i}");
+            }
+
+            Console.WriteLine("\nWhile Loop:");
+            int j = 1;
+            while (j <= 3)
+            {
+                Console.WriteLine($"Jai swaminarayan {j}");
+                j++;
+            }
+
+            Console.WriteLine("\nDo-While Loop:");
+            int k = 1;
+            do
+            {
+                Console.WriteLine($"Jai swaminarayan {k}");
+                k++;
+            } while (k <= 3);
+
+            Console.WriteLine("\nForeach Loop:");
+            string[] colors = { "R", "G", "B" };
+            foreach (string color in colors)
+            {
+                Console.WriteLine($"Color: {color}");
+            }
         }
-    }
-    //Inheritence
-    abstract class Animal
-    {
-        protected string name;
-
-        public Animal(string name)
+        //Inheritence
+        abstract class Animal
         {
-            this.name = name;
+            protected string name;
+
+            public Animal(string name)
+            {
+                this.name = name;
+            }
+
+            // Abstract method
+            public abstract void Speak();
+
+            // Encapsulation -
+            public string GetName() => name;
+            public void SetName(string name) => this.name = name;
         }
 
-        // Abstract method
-        public abstract void Speak();
-
-        // Encapsulation -
-        public string GetName() => name;
-        public void SetName(string name) => this.name = name;
-    }
-
-    class Dog : Animal
-    {
-        public Dog(string name) : base(name)
+        class Dog : Animal
         {
+            public Dog(string name) : base(name)
+            {
+            }
+
+            // Override Speak method
+            public override void Speak()
+            {
+                Console.WriteLine($"{name} barks.");
+            }
         }
 
-        // Override Speak method
-        public override void Speak()
+        class Cat : Animal
         {
-            Console.WriteLine($"{name} barks.");
+            public Cat(string name) : base(name)
+            {
+            }
+            // Override Speak method
+            public override void Speak()
+            {
+                Console.WriteLine($"{name} meows.");
+            }
         }
-    }
 
-    class Cat : Animal
-    {
-        public Cat(string name) : base(name)
-        {
-        }
-        // Override Speak method
-        public override void Speak()
-        {
-            Console.WriteLine($"{name} meows.");
-        }
     }
 
 }
-
-
 
 
