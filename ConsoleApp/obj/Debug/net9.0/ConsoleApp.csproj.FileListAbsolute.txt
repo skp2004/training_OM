@@ -1,0 +1,15 @@
+E:\OM\trainee\ConsoleApp\bin\Debug\net9.0\ConsoleApp.exe
+E:\OM\trainee\ConsoleApp\bin\Debug\net9.0\ConsoleApp.deps.json
+E:\OM\trainee\ConsoleApp\bin\Debug\net9.0\ConsoleApp.runtimeconfig.json
+E:\OM\trainee\ConsoleApp\bin\Debug\net9.0\ConsoleApp.dll
+E:\OM\trainee\ConsoleApp\bin\Debug\net9.0\ConsoleApp.pdb
+E:\OM\trainee\ConsoleApp\obj\Debug\net9.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\OM\trainee\ConsoleApp\obj\Debug\net9.0\ConsoleApp.AssemblyInfoInputs.cache
+E:\OM\trainee\ConsoleApp\obj\Debug\net9.0\ConsoleApp.AssemblyInfo.cs
+E:\OM\trainee\ConsoleApp\obj\Debug\net9.0\ConsoleApp.csproj.CoreCompileInputs.cache
+E:\OM\trainee\ConsoleApp\obj\Debug\net9.0\ConsoleApp.sourcelink.json
+E:\OM\trainee\ConsoleApp\obj\Debug\net9.0\ConsoleApp.dll
+E:\OM\trainee\ConsoleApp\obj\Debug\net9.0\refint\ConsoleApp.dll
+E:\OM\trainee\ConsoleApp\obj\Debug\net9.0\ConsoleApp.pdb
+E:\OM\trainee\ConsoleApp\obj\Debug\net9.0\ConsoleApp.genruntimeconfig.cache
+E:\OM\trainee\ConsoleApp\obj\Debug\net9.0\ref\ConsoleApp.dll
